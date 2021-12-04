@@ -6,6 +6,8 @@
       <p>
         {{ airplane["description"] }}
       </p>
+      <v-chip label>航班日期:{{ airplane["date"] }}</v-chip>
+      <v-chip class="ml-2" label>飛航路線:{{ airplane["where"] }}</v-chip>
     </v-card>
   </div>
 </template>

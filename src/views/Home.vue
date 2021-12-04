@@ -25,6 +25,8 @@ export default {
         description:
           "空中巴士A320neo系列（英語：Airbus A320neo family）是目前由歐洲空中巴士集團所發展中的A320ceo系列機種的改進版本。",
         img: require("../assets/img/A321neo.jpg"),
+        date: "2021/11/05",
+        where: "TPE-NRT",
       },
     };
   },

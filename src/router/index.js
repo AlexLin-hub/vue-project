@@ -16,6 +16,11 @@ const routes = [
     name: 'Sandbox',
     component: Sandbox
   },
+  {
+    path: '/sandbox/:airplane',
+    name: 'Sandbox',
+    component: Sandbox
+  },
 ]
 
 const router = new VueRouter({
