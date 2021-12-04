@@ -65,6 +65,15 @@ export default {
           where: "MFM-TPE",
         },
         {
+          id: "a350-1000",
+          name: "Airbus A350-1000",
+          description:
+            "空中巴士A350 XWB（Airbus A350 XWB），是歐洲飛機製造商空中巴士所研發的長程雙引擎廣體客機系列。",
+          img: require("../assets/img/A350-1000.jpg"),
+          date: "2021/12/06",
+          where: "TPE-MFM",
+        },
+        {
           id: "a350-900",
           name: "Airbus A350-900",
           description:
@@ -72,6 +81,15 @@ export default {
           img: require("../assets/img/A350-900.jpg"),
           date: "2021/12/07",
           where: "TPE-MFM",
+        },
+        {
+          id: "a350-1000",
+          name: "Airbus A350-1000",
+          description:
+            "空中巴士A350 XWB（Airbus A350 XWB），是歐洲飛機製造商空中巴士所研發的長程雙引擎廣體客機系列。",
+          img: require("../assets/img/A350-1000.jpg"),
+          date: "2021/12/07",
+          where: "MFM-TPE",
         },
         {
           id: "a350-900",
