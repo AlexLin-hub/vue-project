@@ -34,7 +34,6 @@ export default {
     goPath() {
       this.$router.push({
         name: "SandboxAirplane",
-        params: { airplane: "a350-1000" },
       });
     },
   },
