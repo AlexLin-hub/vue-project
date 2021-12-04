@@ -32,7 +32,10 @@ export default {
   },
   methods: {
     goPath() {
-      this.$router.push({ name: "Sandbox" });
+      this.$router.push({
+        name: "SandboxAirplane",
+        params: { airplane: "a350-1000" },
+      });
     },
   },
 };
