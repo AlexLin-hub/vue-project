@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: '/sandbox/:airplane',
-    name: 'Sandbox',
+    name: 'SandboxAirplane',
     component: Sandbox
   },
 ]

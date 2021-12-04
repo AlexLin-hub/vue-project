@@ -6,7 +6,7 @@
       <v-row>
         <!-- 欄 -->
         <v-col
-          v-for="(airplane, index) in airplanes"
+          v-for="(airplane, index) in airplanes_"
           :key="`airplane_${index}`"
           cols="12"
           md="4"
@@ -14,6 +14,11 @@
         >
           <airplane-card :airplane="airplane" />
         </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="12">
+          <v-btn @click="goBack()" color="primary" block>返回首頁</v-btn></v-col
+        >
       </v-row>
     </v-container>
   </div>
@@ -65,6 +70,15 @@ export default {
           where: "MFM-TPE",
         },
         {
+          id: "a350-1000",
+          name: "Airbus A350-1000",
+          description:
+            "空中巴士A350 XWB（Airbus A350 XWB），是歐洲飛機製造商空中巴士所研發的長程雙引擎廣體客機系列。",
+          img: require("../assets/img/A350-1000.jpg"),
+          date: "2021/12/06",
+          where: "TPE-MFM",
+        },
+        {
           id: "a350-900",
           name: "Airbus A350-900",
           description:
@@ -72,6 +86,15 @@ export default {
           img: require("../assets/img/A350-900.jpg"),
           date: "2021/12/07",
           where: "TPE-MFM",
+        },
+        {
+          id: "a350-1000",
+          name: "Airbus A350-1000",
+          description:
+            "空中巴士A350 XWB（Airbus A350 XWB），是歐洲飛機製造商空中巴士所研發的長程雙引擎廣體客機系列。",
+          img: require("../assets/img/A350-1000.jpg"),
+          date: "2021/12/07",
+          where: "MFM-TPE",
         },
         {
           id: "a350-900",
@@ -93,6 +116,37 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    airplaneNo() {
+      return this.$route.params.airplane;
+    },
+    airplanes_() {
+      return this.airplaneFilter();
+    },
+  },
+  methods: {
+    goBack() {
+      this.$router.push({ name: "Home" });
+    },
+    airplaneFilter() {
+      const { airplane } = this.$route.params;
+      const { date, where } = this.$route.query;
+      if (airplane) {
+        let airplaneOfNo = this.airplanes.filter(
+          (val) => val["id"] === airplane
+        );
+        if (date) {
+          airplaneOfNo = airplaneOfNo.filter((val) => val["date"] === date);
+        }
+        if (where) {
+          airplaneOfNo = airplaneOfNo.filter((val) => val["where"] === where);
+        }
+        return airplaneOfNo;
+      } else {
+        return this.airplanes;
+      }
+    },
   },
 };
 </script>
