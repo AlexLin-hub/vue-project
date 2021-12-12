@@ -12,7 +12,10 @@
           md="4"
           sm="6"
         >
-          <airplane-card :airplane="airplane" />
+          <airplane-card
+            :airplane="airplane"
+            @click.native="triggerAirplane(airplane)"
+          />
         </v-col>
       </v-row>
       <v-row>
@@ -146,6 +149,10 @@ export default {
       } else {
         return this.airplanes;
       }
+    },
+    triggerAirplane(airplane) {
+      this.$store.dispatch("triggerAirplane", airplane);
+      this.$router.push({ name: "Home" });
     },
   },
 };

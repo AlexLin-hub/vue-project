@@ -5,14 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        // airplane: {}
+        airplane: {}
     },
     mutations: {
-
+        setAirplane(state, playload) {
+            state['airplane'] = playload
+        }
     },
     actions: {
-
+        triggerAirplane({ commit }, playload) {
+            commit("setAirplane", playload)
+        }
     },
     getters: {
+
     }
 })
