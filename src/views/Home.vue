@@ -33,7 +33,7 @@ export default {
   methods: {
     goPath() {
       this.$router.push({
-        name: "SandboxAirplane",
+        name: "Sandbox",
       });
     },
   },
