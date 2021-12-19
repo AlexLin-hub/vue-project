@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Sandbox from '../views/Sandbox.vue'
+import Api from '../views/Api.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [
     path: '/sandbox/:airplane',
     name: 'SandboxAirplane',
     component: Sandbox
+  },
+  {
+    path: '/api',
+    name: 'API',
+    component: Api
   },
 ]
 
